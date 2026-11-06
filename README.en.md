@@ -1,6 +1,7 @@
 # AudioDeck
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Build](https://github.com/zgyhbcz/AudioDeck/actions/workflows/build.yml/badge.svg)](https://github.com/zgyhbcz/AudioDeck/actions/workflows/build.yml)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4)](#requirements)
 [![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.8-512BD4)](https://dotnet.microsoft.com/download/dotnet-framework)
 [![Latest release](https://img.shields.io/github/v/release/zgyhbcz/AudioDeck)](https://github.com/zgyhbcz/AudioDeck/releases)

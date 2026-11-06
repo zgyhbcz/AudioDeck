@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        shell: pwsh
+        run: |
+          Set-ExecutionPolicy -Scope Process Bypass -Force
+          .\build.ps1 -Clean
+
+      - name: Package
+        shell: pwsh
+        run: |
+          Set-ExecutionPolicy -Scope Process Bypass -Force
+          .\package.ps1
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: AudioDeck-${{ github.run_number }}
+          path: |
+            release/AudioDeck-*.zip
+            release/SHA256.txt
+          retention-days: 14
