@@ -1,0 +1,95 @@
+name: Bug report
+description: Report a problem with AudioDeck
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search existing issues first.
+        For security problems, do not open a public issue — use SECURITY.md instead.
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and build
+      description: For example, Windows 11 23H2 (22631.4460)
+      placeholder: Windows 11 ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: AudioDeck version
+      description: Shown in the tray menu or in Settings > Apps
+      placeholder: 1.0.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you run AudioDeck?
+      options:
+        - Installed with install.ps1
+        - Portable build from dist
+        - Built from source
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: devices
+    attributes:
+      label: Audio devices involved
+      description: Names of the output devices, for example "Speakers (Realtek)" or "Headphones (USB DAC)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and its impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the panel
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: |
+        Optional. If the app crashed, check %LOCALAPPDATA%\AudioDeck\error.log.
+        Drag screenshots into this field.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I am using the latest release or current main branch.
+          required: true

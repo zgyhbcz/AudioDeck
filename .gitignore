@@ -1,0 +1,29 @@
+# Build output
+dist/
+release/
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+
+# Windows
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Runtime and temporary files
+*.log
+*.tmp
+*.bak
+*.diagnose.txt
+AudioDeck.diagnose.txt
+error.log
+
+# Archives produced by package.ps1
+*.zip
